@@ -55,27 +55,29 @@ public class FavouriteCardsAdapter extends ArrayAdapter<Card> {
         FavouriteCards favouriteCards = new FavouriteCards();
         ArrayList<Card> cards = favouriteCards.getList();
 
-        for (Card card : cards) {
 
-            if (card.getFaction().equals(ANARCH)) {
+
+        for (Card card  : cards) {
+
+            if (card.getFaction().equals(ANARCH) && faction .equals(ANARCH) ) {
                 return Color.argb(1, 209, 70, 5);
             }
-            if (card.getFaction().equals(NBN)) {
+            if (card.getFaction().equals(NBN) && faction .equals(NBN)) {
                 return Color.YELLOW;
             }
-            if (card.getFaction().equals(HAASBIOROID)) {
+            if (card.getFaction().equals(HAASBIOROID) && faction .equals(HAASBIOROID)) {
                 return Color.argb(1, 126, 7, 176);
             }
-            if (card.getFaction().equals(JINTEKI)) {
+            if (card.getFaction().equals(JINTEKI) && faction .equals(JINTEKI)) {
                 return Color.RED;
             }
-            if (card.getFaction().equals(SHAPER)) {
+            if (card.getFaction().equals(SHAPER) && faction .equals(SHAPER)) {
                 return Color.GREEN;
             }
-            if (card.getFaction().equals(CRIMINAL)) {
+            if (card.getFaction().equals(CRIMINAL) && faction .equals(CRIMINAL)) {
                 return Color.BLUE;
             }
-            if (card.getFaction().equals(WEYLAND)) {
+            if (card.getFaction().equals(WEYLAND) && faction .equals(WEYLAND)) {
                 return Color.argb(1, 6, 152, 86);
             } else {
                 return Color.LTGRAY;
