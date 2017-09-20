@@ -45,11 +45,12 @@ public class FavouriteCardsAdapter extends ArrayAdapter<Card> {
         type.setText(currentCard.getType());
 
         listItemView.setTag(currentCard);
+        listItemView.setBackgroundColor(Colour(currentCard.getFaction()));
 
         return listItemView;
     }
 
-    private int Colour () {
+    private int Colour (Factions faction) {
 
         FavouriteCards favouriteCards = new FavouriteCards();
         ArrayList<Card> cards = favouriteCards.getList();
