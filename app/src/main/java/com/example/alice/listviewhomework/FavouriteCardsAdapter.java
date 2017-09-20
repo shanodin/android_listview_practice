@@ -46,32 +46,40 @@ public class FavouriteCardsAdapter extends ArrayAdapter<Card> {
 
         listItemView.setTag(currentCard);
 
-//        if(currentCard.getFaction().equals(ANARCH)) {
-//            listItemView.setBackgroundColor (Color.argb(1, 209, 70, 5));
-//        }
-//        if(currentCard.getFaction().equals(NBN)) {
-//            listItemView.setBackgroundColor (Color.YELLOW);
-//        }
-//        if(currentCard.getFaction().equals(HAASBIOROID)) {
-//            listItemView.setBackgroundColor (Color.argb(1, 126, 7, 176));
-//        }
-//        if(getItem(position).getFaction().equals(JINTEKI)) {
-//            listItemView.setBackgroundColor (Color.RED);
-//        }
-//        if(getItem(position).getFaction().equals(SHAPER)) {
-//            listItemView.setBackgroundColor (Color.GREEN);
-//        }
-//        if(getItem(position).getFaction().equals(CRIMINAL)) {
-//            listItemView.setBackgroundColor (Color.BLUE);
-//        }
-//        if(getItem(position).getFaction().equals(WEYLAND)) {
-//            listItemView.setBackgroundColor (Color.argb(1, 6, 152, 86));
-//        }
-//        else
-//        {
-//            listItemView.setBackgroundColor (Color.LTGRAY);
-//        }
-
         return listItemView;
+    }
+
+    private int Colour () {
+
+        FavouriteCards favouriteCards = new FavouriteCards();
+        ArrayList<Card> cards = favouriteCards.getList();
+
+        for (Card card : cards) {
+
+            if (card.getFaction().equals(ANARCH)) {
+                return Color.argb(1, 209, 70, 5);
+            }
+            if (card.getFaction().equals(NBN)) {
+                return Color.YELLOW;
+            }
+            if (card.getFaction().equals(HAASBIOROID)) {
+                return Color.argb(1, 126, 7, 176);
+            }
+            if (card.getFaction().equals(JINTEKI)) {
+                return Color.RED;
+            }
+            if (card.getFaction().equals(SHAPER)) {
+                return Color.GREEN;
+            }
+            if (card.getFaction().equals(CRIMINAL)) {
+                return Color.BLUE;
+            }
+            if (card.getFaction().equals(WEYLAND)) {
+                return Color.argb(1, 6, 152, 86);
+            } else {
+                return Color.LTGRAY;
+            }
+        }
+        return Color.LTGRAY;
     }
 }
